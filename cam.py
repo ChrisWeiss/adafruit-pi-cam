@@ -537,7 +537,7 @@ screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
 pygame.camera.init()
 camera = pygame.camera.Camera("/dev/video0", (sizeData[sizeMode][0]))
 camera.start()
-atexit.register(camera.close)
+atexit.register(camera.stop)
 camera.resolution = sizeData[sizeMode][1]
 # camera.crop       = sizeData[sizeMode][2]
 camera.crop = (0.0, 0.0, 1.0, 1.0)
