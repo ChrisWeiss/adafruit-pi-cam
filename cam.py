@@ -247,9 +247,9 @@ upconfig = '/home/pi/.dropbox_uploader'
 
 sizeData = [  # Camera parameters for different size settings
     # Full res      Viewfinder  Crop window
-    [(2592, 1944), (320, 240), (0.0, 0.0, 1.0, 1.0)],  # Large
-    [(1920, 1080), (320, 180), (0.1296, 0.2222, 0.7408, 0.5556)],  # Med
-    [(1440, 1080), (320, 240), (0.2222, 0.2222, 0.5556, 0.5556)]]  # Small
+    [(1920, 1080), (320, 240), (0.0, 0.0, 1.0, 1.0)],  # Large
+    [(1280, 720), (320, 180), (0.1296, 0.2222, 0.7408, 0.5556)],  # Med
+    [(640, 480), (320, 240), (0.2222, 0.2222, 0.5556, 0.5556)]]  # Small
 
 pathData = [
     '/home/pi/Photos',  # Path for storeMode = 0 (Photos folder)
@@ -320,27 +320,7 @@ buttons = [
             cb=sizeModeCallback, value=2),
      Button((0, 10, 320, 29), bg='size')],
 
-    # Screen mode 6 is graphic effect
-    [Button((0, 188, 320, 52), bg='done', cb=doneCallback),
-     Button((0, 0, 80, 52), bg='prev', cb=settingCallback, value=-1),
-     Button((240, 0, 80, 52), bg='next', cb=settingCallback, value=1),
-     Button((0, 70, 80, 52), bg='prev', cb=fxCallback, value=-1),
-     Button((240, 70, 80, 52), bg='next', cb=fxCallback, value=1),
-     Button((0, 67, 320, 91), bg='fx-none'),
-     Button((0, 11, 320, 29), bg='fx')],
-
-    # Screen mode 7 is ISO
-    [Button((0, 188, 320, 52), bg='done', cb=doneCallback),
-     Button((0, 0, 80, 52), bg='prev', cb=settingCallback, value=-1),
-     Button((240, 0, 80, 52), bg='next', cb=settingCallback, value=1),
-     Button((0, 70, 80, 52), bg='prev', cb=isoCallback, value=-1),
-     Button((240, 70, 80, 52), bg='next', cb=isoCallback, value=1),
-     Button((0, 79, 320, 33), bg='iso-0'),
-     Button((9, 134, 302, 26), bg='iso-bar'),
-     Button((17, 157, 21, 19), bg='iso-arrow'),
-     Button((0, 10, 320, 29), bg='iso')],
-
-    # Screen mode 8 is quit confirmation
+    # Screen mode 6 is quit confirmation
     [Button((0, 188, 320, 52), bg='done', cb=doneCallback),
      Button((0, 0, 80, 52), bg='prev', cb=settingCallback, value=-1),
      Button((240, 0, 80, 52), bg='next', cb=settingCallback, value=1),
